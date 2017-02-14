@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public Rigidbody2D rb2d;
+	public KeyCode Space;
 
 	void FixedUpdate ()
 	{
-		if (Input.GetKey (KeyCode.Space)) {
+		if (Input.GetKey (Space)) {
 			rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
 		}
 	}
