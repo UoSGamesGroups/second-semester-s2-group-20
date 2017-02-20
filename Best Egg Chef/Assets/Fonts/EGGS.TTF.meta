@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 084c2e62663e461469f99545e581f6ba
+timeCreated: 1487597533
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Eggs
+  fontNames:
+  - Eggs
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
