@@ -7,6 +7,18 @@ public class Player_Controller : MonoBehaviour {
 	public Rigidbody2D rb2d;
 	public KeyCode Button;
 
+	void Start()
+	{
+		StartCoroutine (Change ());
+		rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+	}
+
+	IEnumerator Change()
+	{
+		yield return new WaitForSeconds (3);
+		rb2d.constraints = RigidbodyConstraints2D.None;
+	}
+
 	void FixedUpdate ()
 	{
 		if (Input.GetKey (Button)) 

@@ -12,7 +12,7 @@ public class Level_Controller : MonoBehaviour
 
 	IEnumerator Change()
 	{
-		yield return new WaitForSeconds (5);
+		yield return new WaitForSeconds (8);
 		SceneManager.LoadScene("Main_Sequence");
 	}
 }
