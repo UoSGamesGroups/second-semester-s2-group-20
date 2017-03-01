@@ -11,6 +11,7 @@ public class Player2Controller : MonoBehaviour {
 	{
 		if (Input.GetKey (Enter)) {
 			rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+			StartCoroutine (Go ());
 		}
 	}
 
@@ -22,6 +23,10 @@ public class Player2Controller : MonoBehaviour {
 
 		if (collision.gameObject.tag == "Glue") {
 			rb2d.drag = 2;
+		}
+
+		if (collision.gameObject.tag == "Marker") {
+			StartCoroutine (Change ());
 		}
 	}
 
@@ -35,5 +40,16 @@ public class Player2Controller : MonoBehaviour {
 		if (collision.gameObject.tag == "Glue") {
 			rb2d.drag = 0;
 		}
+	}
+
+	IEnumerator Change()
+	{
+		yield return new WaitForSeconds (3);
+		Application.LoadLevel (Random.Range (0, 5));
+	}
+	IEnumerator Go()
+	{
+		yield return new WaitForSeconds (3);
+		rb2d.constraints = RigidbodyConstraints2D.None;
 	}
 }
