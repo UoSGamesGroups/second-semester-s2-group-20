@@ -2,11 +2,19 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class OnClick : MonoBehaviour {
+public class OnClick : MonoBehaviour 
+{
 
-	public void sceneChanger(string sceneName)
+	private int LevelLoader = 0;
+
+	void Start()
 	{
-		SceneManager.LoadScene(sceneName);
+		LevelLoader = Random.Range (2, 4);
+	}
+
+	public void sceneChanger()
+	{
+		SceneManager.LoadScene(LevelLoader);
 	}
 
 	public void exitGame()
