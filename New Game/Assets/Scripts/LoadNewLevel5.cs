@@ -10,16 +10,12 @@ public class LoadNewLevel5 : MonoBehaviour
 	void Start()
 	{
 		LevelLoader = Random.Range (14, 16);
-	}
+        StartCoroutine(WaitTime());
+    }
 
-	void Update () 
-	{
-		WaitTime ();
-	}
-
-	IEnumerator WaitTime()
-	{
-		yield return new WaitForSeconds (5);
-		SceneManager.LoadScene (LevelLoader);
-	}
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(LevelLoader);
+    }
 }

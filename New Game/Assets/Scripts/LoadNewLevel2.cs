@@ -10,11 +10,7 @@ public class LoadNewLevel2 : MonoBehaviour
 	void Start()
 	{
 		LevelLoader = Random.Range (5, 7);
-	}
-
-	void Update () 
-	{
-		WaitTime ();
+	    StartCoroutine(WaitTime());
 	}
 
 	IEnumerator WaitTime()
