@@ -36,14 +36,12 @@ public class Egg_Destroyer : MonoBehaviour {
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Basket")
-        {
-            basketpoints.AddScore(scoreValue);
-        }
-        if (collision.gameObject.tag == "Basket1")
-        {
-            basketpoints2.AddScore1(scoreValue1);
-        }
-    }
+	{
+		if (collision.gameObject.tag == "Basket") {
+			basketpoints.AddScore (scoreValue);
+		}
+		if (collision.gameObject.tag == "Basket1") {
+			basketpoints2.AddScore1 (scoreValue1);
+		}
+	}
 }
