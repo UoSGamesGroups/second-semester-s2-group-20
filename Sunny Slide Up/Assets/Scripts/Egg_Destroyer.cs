@@ -43,5 +43,8 @@ public class Egg_Destroyer : MonoBehaviour {
 		if (collision.gameObject.tag == "Basket1") {
 			basketpoints2.AddScore1 (scoreValue1);
 		}
+		if (collision.gameObject.tag == "Ground") {
+			GameObject.Destroy (gameObject);
+		}
 	}
 }
